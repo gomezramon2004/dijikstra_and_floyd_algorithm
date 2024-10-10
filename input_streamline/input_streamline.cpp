@@ -9,7 +9,7 @@ InputStreamline::InputStreamline(const std::string& file_dir): file(file_dir), l
 
 // Lambda function to check if certain element is a number or not
 auto check_if_number = [](const std::string& element) {
-  const int is_negative = (element[0] ? 1 : 0);
+  const int is_negative = (element[0] == '-' ? 1 : 0);
   const int total_digits = std::count_if( element.begin() + is_negative, element.end(), []( char c ) { return std::isdigit( c ); } );
   return total_digits == element.size() - is_negative;
 };

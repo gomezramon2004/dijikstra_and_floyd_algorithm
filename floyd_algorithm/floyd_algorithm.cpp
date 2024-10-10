@@ -3,11 +3,11 @@
 // Constructor
 FloydAlgorithm::FloydAlgorithm(int total_nodes, const std::vector<std::vector<int>>& adjacency_matrix): SIZE(total_nodes), ADJ_MATRIX(adjacency_matrix) {}
 
-// Lambda to get the minimum value for the shortest path calculation
+// Lambda Function to get the minimum value across all the paths. If the value is less than zero, then convert to INT_MAX
 auto get_minimum_value = [](int path_i_j, int path_i_k, int path_k_j) {
-    if (path_i_j == -1) path_i_j = INT_MAX;
-    if (path_i_k == -1) path_i_k = INT_MAX;
-    if (path_k_j == -1) path_k_j = INT_MAX;
+    if (path_i_j < 0) path_i_j = INT_MAX;
+    if (path_i_k < 0) path_i_k = INT_MAX;
+    if (path_k_j < 0) path_k_j = INT_MAX;
 
     int path_i_k_j = path_i_k + path_k_j;
 
