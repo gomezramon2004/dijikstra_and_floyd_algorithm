@@ -1,0 +1,8 @@
+# Output
+*.out
+
+# System files 
+.DS_Store  
+
+# Code Editor
+.vscode/
