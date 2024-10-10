@@ -14,8 +14,8 @@ Make sure you have the following installed:
 1. **Clone the repository** to your local machine:
 
    ```bash
-   git clone https://github.com/gomezramon2004/dijikstra_algorithm.git
-   cd ./dijikstra_algorithm
+   git clone https://github.com/gomezramon2004/dijikstra_and_floyd_algorithm.git
+   cd ./dijikstra_and_floyd_algorithm
 
 2. **Build** the project using the Makefile
 
