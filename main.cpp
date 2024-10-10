@@ -1,4 +1,5 @@
 #include "dijkstra_algorithm/dijkstra_algorithm.hpp"
+#include "floyd_algorithm/floyd_algorithm.hpp"
 #include "input_streamline/input_streamline.hpp"
 
 int main() {
@@ -12,7 +13,8 @@ int main() {
       dijkstra_algorithm.run_algorithm(i);
     }
 
-    
+    FloydAlgorithm floyd_algorithm(total_nodes, matrix_adj);
+    floyd_algorithm.run_algorithm();
   } catch (const std::exception& e) {
     throw std::runtime_error("Error: " + std::string(e.what()));
     return 1;
