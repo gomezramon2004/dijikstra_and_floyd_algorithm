@@ -15,7 +15,7 @@ auto check_if_number = [](const std::string& element) {
 };
 
 // Helper function to get the matrix nodes with error handling
-std::vector<std::vector<int>> InputStreamline::get_matrix_nodes(const int& total_nodes) {
+std::vector<std::vector<int>> InputStreamline::get_matrix_nodes(int total_nodes) {
   std::vector<std::vector<int>> matrix(total_nodes, std::vector<int>(total_nodes));
 
   for (int i = 0; i < total_nodes; ++i) {
